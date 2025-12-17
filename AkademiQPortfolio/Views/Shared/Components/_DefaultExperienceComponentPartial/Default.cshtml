@@ -1,0 +1,59 @@
+﻿@model List<Experience>
+
+<section id="section4">
+	<div class="container">
+		<h2>Deneyimlerim</h2>
+		<div class="experience-timeline">
+
+			@foreach (var item in Model)
+			{
+				
+			
+			<div class="experience-block clearfix">
+				<div class="meta">
+					<span class="year">@item.WorkDate</span>
+					<span class="company">@item.CompanyName</span>
+				</div> <!-- end .meta -->
+				<div class="content">
+					<h5>@item.Title</h5>
+					<p>@item.Description</p>
+				</div> <!-- end .content -->
+				<div class="icon">
+					<i class="@item.IconUrl"></i>
+				</div> <!-- end .icon -->
+				<div class="line"></div>
+			</div> <!-- end .experience-block -->
+			}
+				
+				
+				 <!-- end .icon -->
+			</div> <!-- end .experience-block -->
+		</div> <!-- end .experience-timeline -->
+		<!-- Testimonials -->
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<div class="testimonial-slider owl-carousel">
+					<div>
+						<div class="image"><img src="images/testimonial.jpg" alt="alt text"></div>
+						<div class="sep"></div>
+						<p>" Awesome to work with. Incredibly organized, easy to communicate with, responsive with next iterations, and beautiful work. "</p>
+						<span class="author">swetain , CEO of Texco Company</span>
+					</div>
+					<div>
+						<div class="image"><img src="images/testimonial.jpg" alt="alt text"></div>
+						<div class="sep"></div>
+						<p>" Awesome to work with. Incredibly organized, easy to communicate with, responsive with next iterations, and beautiful work. "</p>
+						<span class="author">swetain , CEO of Texco Company</span>
+					</div>
+					<div>
+						<div class="image"><img src="images/testimonial.jpg" alt="alt text"></div>
+						<div class="sep"></div>
+						<p>" Awesome to work with. Incredibly organized, easy to communicate with, responsive with next iterations, and beautiful work. "</p>
+						<span class="author">swetain , CEO of Texco Company</span>
+					</div>
+				</div> <!-- end .testimonial-slider -->
+			</div> <!-- end .col-sm-8 -->
+		</div> <!-- end .row -->
+
+	</div> <!-- end .container -->
+</section>
