@@ -30,6 +30,28 @@ namespace AkademiQPortfolio.Controllers
             _context.SaveChanges();
             return RedirectToAction("SkillList");
         }
+
+        public IActionResult DeleteSkill(int id)
+        {
+            var value = _context.Skills.Find(id);
+            _context.Skills.Remove(value);
+            _context.SaveChanges();
+            return RedirectToAction("SkillList");
+        }
+
+        [HttpGet]
+        public IActionResult UpdateSkill(int id)
+        {
+            var value=_context.Skills.Find(id);
+            return View(value);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateSkill(Skill skill)
+        {
+            _context.Skills.Update(skill);
+            _context.SaveChanges();
+            return RedirectToAction("SkillList");
+        }
     }
 }
-//SkillNewController
